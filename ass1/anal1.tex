@@ -7,7 +7,7 @@
 
 
 %for math
-\usepackage{amsmath, amssymb, amsfonts} %standard
+\usepackage{amsmath, amstext, amssymb, amsfonts} %standard
 \usepackage{youngtab} % makes squares for math diagrams
 \usepackage{microtype} %% <-- added
 %-----------------------------------------------------------           
@@ -128,7 +128,7 @@ Professor #3 \hfill Week #2 \smallskip ~\\
 \usepackage{algpseudocode}
 \begin{document}
 
-\heading{Real Analysis}{1}{Rishi Vyas}{Tuesday, July 30, 2024}{none}
+\heading{Real Analysis}{1}{Rishi Vyas}{Tuesday, July 30, 2024}{Sahithim Akella, Khushi Tyagi }
 
 \problem{A}{4 Points}
 \textbf{Definition.} \emph{Let $x \in \mathbb{R}$. If $n \in \mathbb{N}$, we define $x^n:=\overbrace{x \ldots x}^{n \text { times }}$. By convention, for $n=0$ we interpret this as defining $x^0:=1$.}~\\
@@ -199,63 +199,310 @@ Professor #3 \hfill Week #2 \smallskip ~\\
 		      \contradiction
 	      \end{align*}
 
+
 \end{enumerate}
 
+\newpage
 \problem{B}{3 Points}
-\textbf{Definition.} Let $x \in \mathbb{R}$, $x \neq 0.$ If $n \in \mathbb{N}$,
-~\\
-\noindent \textbf{To Prove.} Let $x, y, z \in \mathbb{R}$.
-
+Let $x, y, z \in \mathbb{R}$.
 \begin{enumerate}
 	\item If $x<y$ and $z>0$, then $x z<y z$.
-	\item If $x<0$ then $x^{-1}<0$.
-	\item If $x, y \geq 0$ and $n \in \mathbb{Z}_{>0}$, prove that $x \leq y$ if and only if $x^n \leq y^n$. Deduce that $x<y$ if and only if $x^n<y^n$.
-
-	      \problem{D}{4 Points}
-	      \begin{enumerate}
-		      \item Let $a, b \in \mathbb{R}$.
-		            \begin{enumerate}
-			            \item Consider the set $\{a, b\}$. Prove that the supremum of the set $\{a, b\}$ is equal to $a$ if $a \geq b$, and is equal to $b$ if $b \geq a$.
-			            \item Prove that
-			                  $$
-				                  \sup (\{a, b\})=\frac{a+b+|a-b|}{2} .
-			                  $$
-			            \item  Formulate and prove a variant of the above formula describing the infimum of the set $\{a, b\}$.
-
-		            \end{enumerate}
-
-		      \item Let $a_1, \ldots, a_n$ be elements of $\mathbb{R}$. Prove that
-		            $$ \sup \left(\left\{a_1, \ldots, a_n\right\}\right)=\sup \left(\left\{\sup \left(\left\{a_1, \ldots, a_{n-1}\right\}\right), a_n\right\}\right) . $$
-		            Deduce that $\sup \left(\left\{a_1, \ldots, a_n\right\}\right) \in\left\{a_1, \ldots, a_n\right\}$.
-	      \end{enumerate}
-
-
-
-	      \textbf{Definition.} \emph{If $a_1, \ldots, a_n$ are elements of $\mathbb{R}$, define the maximum of these elements by $\max \left\{a_1, \ldots, a_n\right\}:=\sup \left(\left\{a_1, \ldots, a_n\right\}\right)$. From the previous question, we then observe that $\max \left\{a_1, \ldots, a_n\right\} \in\left\{a_1, \ldots, a_n\right\}$. We can define the minimum of $a$ collection of elements in $\mathbb{R}$ in an analogous manner using inf instead of sup.}
 	      \\
+	      \textbf{Proof.}\\
+	      If $x < y$, then $y - x > 0$. Since $z > 0$, we can multiply both sides of the inequality by $z$ to get $z(y - x) > 0$. This implies $z y - z x > 0$, which is equivalent to $x z < y z$. Thus, if $x < y$ and $z > 0$, then $x z < y z$.
 
-	      \textbf{Definition.} \emph{Let $S \subseteq \mathbb{R}$. We say that $S$ is bounded if it is bounded above and bounded below.}
 
-	      \problem{E}{3 Points}
-	      Let $S$ be a subset of $\mathbb{R}$.
-	      \begin{enumerate}
-		      \item     Show that $S$ is bounded if and only if there exists an $m \in \mathbb{R}$ such that $|x| \leq m$ for all $x \in S$.
-		      \item  Deduce that the following three statements are equivalent:
-		            \begin{enumerate}
-			            \item The $S$ is bounded.
-			            \item There exists $m \in \mathbb{R}$ such that $S \subseteq[-m, m]$.
-			            \item There exist $a, b \in \mathbb{R}$ with $a \leq b$ such that $S \subseteq[a, b]$.
-		            \end{enumerate}
-	      \end{enumerate}
+	\item If $x<0$ then $x^{-1}<0$.
+	      \\
+	      \textbf{Proof.}\\
+	      $\exists  x \in \mathbb{R}$ such that $x < 0$. Since $x < 0$, we have $-x > 0$. Since $-x > 0$, we can take the reciprocal of both sides to get $(-x)^{-1} > 0$. This implies $x^{-1} > 0$. Thus, if $x < 0$, then $x^{-1} > 0$.
+	      $x < 0 \implies x-x < 0-x \implies -x > 0$.
+	\item If $x, y \geq 0$ and $n \in \mathbb{Z}_{>0}$, prove that $x \leq y$ if and only if $x^n \leq y^n$. Deduce that $x<y$ if and only if $x^n<y^n$.
+	      \\
+	      \textbf{To Prove.} $x, y \geq 0$ and $n \in \mathbb{Z}_{>0}$, then $x \leq y \iff x^n \leq y^n$.
+	      \underline{Case I}, $x \leq y$\\
 
-	      Let $S \subseteq \mathbb{R}$.
-	      (1) Let $x, y \in \mathbb{R}$, and suppose $x$ and $y$ both satisfy the definition of an infimum of $S$. Show that $x=y$.
-	      (2) Let $x \in \mathbb{R}$. Show that $x=\inf (S)$ if and only if it satisfies the following two conditions:
-	      a.) The element $x$ is a lower bound for $S$.
-	      b.) Given $\epsilon>0$, there exists some $y \in S$ such that $y<x+\epsilon$.
-	      (3) Let $x \in \mathbb{R}$. Show that $x=\inf (S)$ if and only if it satisfies the following two conditions:
-	      a.) The element $x$ is a lower bound for $S$.
-	      b.) Given $n \in \mathbb{Z}_{>0}$, there exists some $y \in S$ such that $y<x+\frac{1}{n}$.
+
 \end{enumerate}
+
+
+
+
+
+
+
+
+
+\newpage
+\problem{C}{4 Points}
+\begin{enumerate}
+	\item Show that $\mathbb{Q}$ is neither bounded above nor bounded below.
+	\item Determine the supremum and infimum of the following sets. Substantiate your claims with proofs: \\
+	      \textbf{Definition.} Let $S \subseteq \mathbb{R}$ and $x \in \mathbb{R}$.\\
+	      The element $x$ is the \emph{supremum} of $S$ if $s \leq x, \forall s \in S$ and for any upper bound $y$ of $S$, $x \leq y$. \\The element $x$ is the \emph{infimum} of $S$ if $s \geq x, \forall s \in S$ and for any lower bound $y$ of $S$, $x \geq y$.
+
+	      \begin{enumerate}
+		      \item (-1, 0] = \{$x \in \mathbb{R}, -1 < x \leq 0$\}\\
+		            \textbf{To Prove.} Supremum is 0, Infimum is -1.\\
+		            \textbf{Proof.} 0 is an upper bound by the definition of the set. Let $y$ be an upper bound for (-1, 0], since $0 \in (-1, 0] \implies 0 \leq y$. So, 0 is the supremum.\\
+		            -1 is a lower bound by the definition of the set. To show that -1 is the greatest lower bound, lets assume $M$ is the infimum and $M > -1$ ($M$ cannot be less than -1 since -1 is already a lower bound, and any number lesser than -1 cannot be the infimum).\\
+		            Let $x$ be the midpoint between $M$ and -1, $x = \frac{M + (-1)}{2} = \frac{M - 1}{2} = M - (\frac{1+M}{2}).$ This implies $M > x$, and we have to show that $x > -1$.\\
+		            But let's assume $x \leq -1$, then
+		            \begin{align*}
+			            M - (\frac{1+M}{2}) & \leq -1 \\
+			            M - 1               & \leq -2 \\
+			            M                   & \leq -1
+		            \end{align*}
+		            But we assumed $M > -1$, thus by contradiction, $x > -1$. This implies $M > x > -1$, which contradicts the assumption that $M$ is the infimum. Thus, -1 is the infimum.
+
+		      \item (1, 2) = \{$x \in \mathbb{R}, 1 < x < 2$\}\\
+		            \textbf{To Prove.} Supremum is 2, Infimum is 1.\\
+		            \textbf{Proof.} 2 is an upper bound by the definition of the set. To show that 2 is the least upper bound, let's assume $M$ is the supremum and $M < 2$ ($M$ cannot be greater than 2 since 2 is already an upper bound, and any number greater than 2 cannot be the supremum).\\
+		            Let $x$ be the midpoint between $M$ and 2, $x = \frac{M + 2}{2}$. This implies $M < x$, and we have to show that $x < 2$.\\
+		            But let's assume $x \geq 2$, then
+		            \begin{align*}
+			            \frac{M + 2}{2} & \geq 2 \\
+			            M + 2           & \geq 4 \\
+			            M               & \geq 2
+		            \end{align*}
+		            But we assumed $M < 2$, thus by contradiction, $x < 2$. This implies $2 > x > M$, which contradicts the assumption that $M$ is the supremum. Thus, 2 is the supremum.\\
+		            $\square$\\
+
+
+		            1 is a lower bound by the definition of the set. To show that 1 is the greatest lower bound, lets assume $M$ is the infimum and $M < 1$ ($M$ cannot be greater than 1 since 1 is already a lower bound, and any number greater than 1 cannot be the infimum).\\
+		            Let $x$ be the midpoint between $M$ and 1, $x = \frac{M + 1}{2}$. This implies $M < x$, and we have to show that $x < 1$.\\
+		            But let's assume $x \geq 1$, then
+		            \begin{align*}
+			            \frac{M + 1}{2} & \geq 1 \\
+			            M + 1           & \geq 2 \\
+			            M               & \geq 1
+		            \end{align*}
+		            But we assumed $M < 1$, thus by contradiction, $x < 1$. This implies $1 > x > M$, which contradicts the assumption that $M$ is the infimum. Thus, 1 is the infimum.
+		            $\square$
+	      \end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\problem{D}{4 Points}
+\begin{enumerate}
+	\item Let $a, b \in \mathbb{R}$
+	      \begin{enumerate}
+		      \item Consider the set $\{a, b\}$. Prove that the supremum of the set $\{a, b\}$, is equal to $a$ if if $a \geq b$ and is equal to $b$ of $b \geq a$.
+		            \\
+		            \textbf{Solution.} \\
+		            \underline{Case I}, Let $a, b \in \mathbb{R}$ and $a \geq b$.
+		            \\
+		            $\forall x \in \{a, b\}, x \leq a$ therefore $a$ is an upper bound.\\
+		            Let $y$ be an upper bound for $\{a, b\}$, since $a \in \{a, b\} \implies a \leq y$. So, $a$ is the supremum.\\
+		            \\
+		            \underline{Case II}, Let $a, b \in \mathbb{R}$ and $b \geq a$.
+		            \\
+		            $\forall x \in \{a, b\}, x \leq b$ therefore $b$ is an upper bound.\\
+		            Let $y$ be an upper bound for $\{a, b\}$, since $b \in \{a, b\} \implies b \leq y$. So, $b$ is the supremum.\\
+
+		      \item \textbf{To Prove.}  $$
+			            \sup (\{a, b\})=\frac{a+b+|a-b|}{2} .
+		            $$
+		            \textbf{Solution.} \\
+		            \underline{Case I}, $a \geq b$\\
+		            From QD.1(a), we know that the supremum of the set $\{a, b\}$ is $a$
+		            \begin{align*}
+			            \text{sup}(\{a, b\}) & = a                         \\
+			            \text{sup}(\{a, b\}) & = a + b - b                 \\
+			            \text{sup}(\{a, b\}) & = \frac{2a +b - b}{2}       \\ \text{Since } a \geq b, a - b = |a - b| \\
+			            \text{sup}(\{a, b\}) & = \frac{a + b + |a - b|}{2}
+			            \\ \square
+		            \end{align*}
+		            \\
+		            \underline{Case II}, $b \geq a$\\
+		            From QD.1(a), we know that the supremum of the set $\{a, b\}$ is $b$
+		            \begin{align*}
+			            \text{sup}(\{a, b\})                 & = b                     \\
+			            \text{sup}(\{a, b\})                 & = a + b - a             \\
+			            \text{sup}(\{a, b\})                 & = \frac{a+b-(a-b)}{2}   \\
+			            \text{Since } a \leq b, a - b \leq 0 & \implies |a-b| = -(a-b) \\
+			            \text{sup}(\{a, b\})                 & = \frac{a+b+|a-b|}{2}
+			            \\ \square
+		            \end{align*}
+		            Thus for both cases, the formula $\sup (\{a, b\})=\frac{a+b+|a-b|}{2} $ works. Hence proved.
+
+
+
+		            \newpage
+		      \item Formulate and prove a variant of the above formula describing the infimum of the set $\{a, b\}$.
+		            \textbf{Solution.}\\
+		            \underline{Case I}, $a \geq b$ \\
+		            Using the same principle from QD.1(a)
+		            \begin{align*}
+			            \text{inf}(\{a, b\})          & = b                   \\
+			            \text{inf}(\{a, b\})          & = b + a - a           \\
+			            \text{inf}(\{a, b\})          & = \frac{b + b+a-a}{2} \\
+			            \text{inf}(\{a, b\})          & = \frac{a+b-a+b}{2}   \\
+			            \text{inf}(\{a, b\})          & = \frac{a+b-(a-b)}{2} \\
+			            \text{Since } a \geq b, a - b & = |a-b|               \\
+			            \text{inf}(\{a, b\})          & = \frac{a+b+|a-b|}{2}
+			            \\ \square
+		            \end{align*}
+		            \underline{Case II}, $b \geq a$ \\
+		            Using the same principle from QD.1(a)
+		            \begin{align*}
+			            \text{inf}(\{a, a\})          & = a                   \\
+			            \text{inf}(\{a, b\})          & = a + b - b           \\
+			            \text{inf}(\{a, b\})          & = \frac{a+b-b+a}{2}   \\
+			            \text{inf}(\{a, b\})          & = \frac{b+b-(b-b)}{2} \\
+			            \text{Since } a \geq b, a - b & = |a-b|               \\
+			            \text{inf}(\{a, b\})          & = \frac{a+b+|a-b|}{2}
+			            \\ \square
+		            \end{align*}
+	      \end{enumerate}
+	\item Let $a_1, \cdots, a_n$ be elements of $\mathbb{R}$. Prove that $$
+		      \sup \left(\left\{a_1, \ldots, a_n\right\}\right)=\sup \left(\left\{\sup \left(\left\{a_1, \ldots, a_{n-1}\right\}\right), a_n\right\}\right) .
+		      \\
+	      $$
+
+
+	      Deduce that $\sup \left(\left\{a_1, \ldots, a_n\right\}\right) \in\left\{a_1, \ldots, a_n\right\}$.
+	      \\
+	      \textbf{Solution.}\\
+	      \underline{Case I}, Let $a_1, \cdots, a_n$ be elements of $\mathbb{R}$ and $a_1 \geq a_2 \geq \cdots \geq a_n$.
+
+\end{enumerate}
+
+
+
+
+
+
+
+\newpage
+\problem{E}{3 Points}
+Let $S$ be a subset of $\mathbb{R}$.
+\begin{enumerate}
+	\item     Show that $S$ is bounded if and only if there exists an $m \in \mathbb{R}$ such that $|x| \leq m$ for all $x \in S$.
+	      \\
+	      \textbf{To Prove.} $S$ is bounded $\iff$ $\exists m \in \mathbb{R}$ such that $|x| \leq \forall x \in S$.
+	      \\
+	      \textbf{Proof.} Let $S \subseteq \mathbb{R}$ be a bounded set
+	      From $E(1), \exists m \in \mathbb{R}$ such that $|x| \leq m \forall x \in S$
+	      $$
+		      \begin{aligned}
+			       & \forall x \in S, x \leqslant m \text { and }-x \leqslant m \\
+			       & \forall x \in S,-m \leqslant x \text { and } x \leqslant m \\
+			       & \forall x \in S,-m \leqslant x \leqslant m                 \\
+			       & \forall x \in S, S \in[-m, m]                              \\
+			       & S \leq[-m, m] \quad[a \neq b]
+		      \end{aligned}
+	      $$
+
+	      Assume $\exists m \in \mathbb{R}$ sit $S \subseteq[-m, m]$
+	      $$
+		      \Rightarrow \forall x \in S,-m \leqslant x \leqslant m
+	      $$
+	      $\Rightarrow \forall x \in S,-m \leqslant x \Rightarrow-m$ is a lower bound
+	      $\Rightarrow \forall \in S, x \leqslant m \Rightarrow m$ is an upper bound of $S$.
+	      Since $S$ has a lower bound and an upper bound, $S$ is bounded in $\mathbb{R}$.
+	      $$
+		      [b \Rightarrow a]
+	      $$	\item  Deduce that the following three statements are equivalent:
+	      \begin{enumerate}
+		      \item The $S$ is bounded.
+		      \item There exists $m \in \mathbb{R}$ such that $S \subseteq[-m, m]$.
+		      \item There exist $a, b \in \mathbb{R}$ with $a \leq b$ such that $S \subseteq[a, b]$.
+	      \end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+\newpage
+\problem{F}{4 Points}
+\begin{enumerate}
+	\item Let $x, y \in \mathbb{R}$, and suppose $x$ and $y$ both satisfy the definition of an infimum of $S$. Show that $x=y$.
+	      \textbf{To Prove.} If $x, y \in \mathbb{R}$ and both satisfy the definition of an infimum of $S$, then $x=y$.\\
+	      \textbf{Definition.} Let $S \subseteq \mathbb{R}$. We say that $x \in \mathbb{R}$ is the infimum of $S$ if $x \leq s  \forall s \in S$ and for any lower bound $y$ of $S$, $x \geq y$.\\
+	      \textbf{Proof.} Suppose $x$ and $y$ are the infimum of $S$.
+	      \\ Since $y$ is an infimum of $S$, $y$ is a lower bound of $S$. Therefore, by the property of infimum, $y\leq x$ because $x$ is the infimum.
+	      \\ Since $x$ is an infimum of $S$, $x$ is a lower bound of $S$. Therefore, by the property of infimum, $x \geq y$ because $y$ is the infimum.
+	      \\ By the property of antisymmetry, $x \geq y$ and $y \geq x$ implies $x = y$. Thus, $x = y.
+		      \\\square$
+
+
+	\item Let $x \in \mathbb{R}$. Show that $x=\inf (S)$ if and only if it satisfies the following two conditions:
+
+	      \begin{enumerate}
+		      \item The element $x$ is a lower bound for $S$.
+		      \item Given $\epsilon>0$, there exists some $y \in S$ such that $y<x+\epsilon$.
+		            \\\textbf{To Prove.} $x=\inf (S) \iff  x \text{ is a lower bound for } S \text{ and } \forall \epsilon > 0, \exists y \in S \text{ such that } y < x + \epsilon$.
+		            \\
+		            \textbf{Solution.} \\
+		            (a) It's already in the definition of infimum that $x$ has to be a lower bound, so no need to prove that.
+		            \\
+		            (b) If such $y$ does not exist, $\forall y \in S, y \geq x + \epsilon \implies x + \epsilon$ is a lower bound of $S$. $x+\epsilon$ is a lower bound > $x \implies x$ is not infimum.
+		            \\
+		            If such $y$ exists, then $x + \epsilon$ is not a lower bound of $S$. Thus, $x$ is the infimum of $S$.
+
+
+	      \end{enumerate}
+	\item Let $x \in \mathbb{R}$. Show that $x=\inf (S)$ if and only if it satisfies the following two conditions:
+	      \begin{enumerate}
+		      \item The element $x$ is a lower bound for $S$.
+		      \item Given $n \in \mathbb{Z}_{>0}$, there exists some $y \in S$ such that $y<x+\frac{1}{n}$.
+	      \end{enumerate}
+\end{enumerate}
+
+
+\newpage
+\problem{G}{4 Points}
+Prove that in the presence of properties (1) to (16), property (17) and property $(17)_L$ are equivalent. Deduce that every non-empty bounded below subset of $\mathbb{R}$ has an infimum.
+\\
+
+\noindent \textbf{To Prove.} If $A$ and $B$ are subsets of $\mathbb{R}$ such that both $A$ and $B$ are non-empty and $a \leq b$ for all $a \in A$ and $b \in B$, there exists $s \in \mathbb{R}$ such that $a \leq s \leq b$ for all $a \in A$ and $b \in B \iff$ every non-empty bounded below subset of $\mathbb{R}$ has an infimum.
+\\
+\\
+\textbf{Proof.}\\
+\underline{Assuming 17 $\implies$ $17_L$}\\
+Property $(17)_L$ states that every non-empty bounded below subset of $\mathbb{R}$ has an infimum. Let $S \subseteq \mathbb{R}$ be a non-empty bounded below subset. Define $B:=\{x \in \mathbb{R} \mid x \leq s$ for all $s \in S\}$, the set of all lower bounds of $S$. Since $S$ is bounded below, $B$ is non-empty.
+
+\noindent By property (17), there exists $t \in \mathbb{R}$ such that $t \leq s$ for all $s \in S$ and $b \leq t$ for all $b \in B$. Thus, $t$ is a lower bound for $S$ (since $t \leq s$ for all $s \in S$ ) and $t$ is greater than or equal to any other lower bound of $S$ (since $b \leq t$ for all $b \in B$ ). Therefore, $t$ is the infimum of $S$.
+
+\noindent We conclude that property $(17)_L$ holds.
+\\
+\\
+\noindent \underline{Assuming $17_L$ $\implies$ 17}\\
+Assume property $(17)_L$ holds. We need to show that property (17) also holds.
+
+\noindent Property (17) states that given non-empty subsets $A$ and $B$ of $\mathbb{R}$ such that $a \leq b$ for all $a \in A$ and $b \in B$, there exists $t \in \mathbb{R}$ such that $a \leq t \leq b$ for all $a \in A$ and $b \in B$.
+
+\noindent Let $A$ and $B$ be non-empty subsets of $\mathbb{R}$ such that $a \leq b$ for all $a \in A$ and $b \in B$. This condition implies that every element of $B$ is a lower bound for $A$, so $A$ is bounded below. By property $(17)_L$, $A$ has an infimum, say $t$. Since $t$ is a lower bound for $A$, we have $t \leq a$ for all $a \in A$. Moreover, since $t$ is the greatest lower bound of $A$, and every element of $B$ is a lower bound for $A$, we have $b \leq t$ for all $b \in B$.
+
+\noindent Thus, there exists $t \in \mathbb{R}$ such that $a \leq t \leq b$ for all $a \in A$ and $b \in B$.
+
+\noindent We conclude that property (17) holds.
+~\\
+~\\
+\noindent Therefore 17 $\iff 17_L$. \noindent $\square$
+
 
 \end{document}

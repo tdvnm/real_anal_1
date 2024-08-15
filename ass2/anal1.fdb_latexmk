@@ -1,10 +1,10 @@
 # Fdb version 4
-["xdvipdfmx"] 1723553254.01573 "anal1.xdv" "anal1.pdf" "anal1" 1723553254.72901 0
-  "anal1.xdv" 1723553253.48325 108372 175e944118fcd3a2e1732abdc4c39923 "xelatex"
+["xdvipdfmx"] 1723487332.35766 "anal1.xdv" "anal1.pdf" "anal1" 1723487332.78512 0
+  "anal1.xdv" 1723487331.95794 55748 3914afb79ee2bbb50a7d80b05a00e07c "xelatex"
   (generated)
   "anal1.pdf"
   (rewritten before read)
-["xelatex"] 1723553247.58993 "anal1.tex" "anal1.xdv" "anal1" 1723553254.71673 0
+["xelatex"] 1723487329.30219 "anal1.tex" "anal1.xdv" "anal1" 1723487332.77522 0
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -258,10 +258,10 @@
   "/usr/share/texlive/texmf-dist/tex/latex/zref/zref-abspage.sty" 1649363507 2245 c8a4088d07cffc2e5207730c738edd76 ""
   "/usr/share/texlive/texmf-dist/tex/latex/zref/zref-base.sty" 1649363507 20785 71a3d72ab517959a6979c27e6176bec1 ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1714953600 40900 887e0dc8cac988a9e9c574af364cf837 ""
-  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1723530246 11143758 7d35beb805ba14719562e6d87bd1efdb ""
-  "anal1.aux" 1723553253.48126 1073 9ae4660ced9caf2ee49c88929e047df1 "xelatex"
-  "anal1.out" 1723553252.61932 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "anal1.tex" 1722450585.72066 22904 fa0132edfa1fd7b00709a14e1bf9f444 ""
+  "/var/lib/texmf/web2c/xetex/xelatex.fmt" 1720977352 11143748 aef0ef8853092aa802ce936fa1fc9477 ""
+  "anal1.aux" 1723487331.95594 1111 f7e802a7553c0faf8c2d216cc7ab1e74 "xelatex"
+  "anal1.out" 1723487331.45694 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "anal1.tex" 1723487327.38193 11459 1cf0ee0e6a832a723008c0cd40e19b96 ""
   (generated)
   "anal1.aux"
   "anal1.log"

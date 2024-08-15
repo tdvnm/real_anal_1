@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Fedora 40) (preloaded format=xelatex 2024.8.13)  13 AUG 2024 18:17
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Fedora 40) (preloaded format=xelatex 2024.7.14)  12 AUG 2024 23:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1092,7 +1092,22 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 134--137
+Underfull \hbox (badness 10000) in paragraph at lines 144--150
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--166
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--166
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--166
 
  []
 
@@ -1106,6 +1121,42 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [1
 
 ]
+Package mdframed Info: Not enough space on this page on input line 170.
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--181
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--194
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--210
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--217
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--220
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
+
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1114,9 +1165,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [2]
-Package mdframed Info: Not enough space on this page on input line 206.
+Package mdframed Info: Not enough space on this page on input line 225.
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--224
+Underfull \hbox (badness 10000) in paragraph at lines 226--236
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 241--249
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 250--260
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--273
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--281
 
  []
 
@@ -1128,9 +1199,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [3]
-Package mdframed Info: Not enough space on this page on input line 237.
+Underfull \hbox (badness 10000) in paragraph at lines 282--287
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--270
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--291
 
  []
 
@@ -1141,103 +1215,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[4]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[5]
-Package mdframed Info: Not enough space on this page on input line 303.
-
-Underfull \hbox (badness 10000) in paragraph at lines 307--319
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 307--319
-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[6]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[7]
-Package mdframed Info: Not enough space on this page on input line 395.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[8]
-Package mdframed Info: Not enough space on this page on input line 440.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[9]
-Package mdframed Info: Not enough space on this page on input line 477.
-
-Underfull \hbox (badness 10000) in paragraph at lines 478--480
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 481--487
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 490--495
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 502--506
-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[10] 
+[4] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./anal1.aux)
 Package rerunfilecheck Info: File `anal1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 45668 strings out of 476689
- 1080887 string characters out of 5806613
- 1865018 words of memory out of 6000000
- 65177 multiletter control sequences out of 15000+600000
- 517391 words of font info for 63 fonts, out of 8000000 for 9000
+ 45656 strings out of 476689
+ 1080577 string characters out of 5806613
+ 1864018 words of memory out of 6000000
+ 65169 multiletter control sequences out of 15000+600000
+ 517375 words of font info for 61 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 99i,13n,103p,1002b,925s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,103p,1002b,925s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on anal1.xdv (10 pages, 108372 bytes).
+Output written on anal1.xdv (4 pages, 55748 bytes).

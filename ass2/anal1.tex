@@ -1,0 +1,299 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[letterpaper,top=0cm, margin=0.85in]{geometry}
+
+\usepackage{textcmds} %more symbols
+\usepackage{fontspec} %more fonts
+
+
+%for math
+\usepackage{amsmath, amstext, amssymb, amsfonts} %standard
+\usepackage{youngtab} % makes squares for math diagrams
+\usepackage{microtype} %% <-- added
+%-----------------------------------------------------------           
+
+%\usepackage{sectsty}
+%for lists and numbers
+\usepackage{enumitem}
+%-----------------------------------------------------------
+
+% Doc setting
+\usepackage[english]{babel} % Replace `english' with e.g. `spanish' to change the document language
+\usepackage{setspace} %to set spacing bw words and lines
+\usepackage{changepage}
+% \setlength\parindent{0pt}
+
+%footer
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+% \fancyhf{0pt} % sets both header and footer to nothing
+% \renewcommand{\footrulewidth}{0pt}
+% \renewcommand{\headrulewidth}{0pt} %remove headerline
+
+% \fancyfoot[RE,RO]{\thepage}
+\fancyfoot[C]{MATH 201 | \emph{Shubhro Gupta}}
+\renewcommand{\headrulewidth}{0pt}% Default \headrulewidth is 0.4pt
+\renewcommand{\footrulewidth}{0.4pt}% Default \footrulewidth is 0pt
+\fancyfoot[L]{Assignment 2}
+\fancyfoot[R]{\thepage}
+\pagestyle{fancy}
+%-----------------------------------------------------------
+
+%for pictures and graphs
+\usepackage{graphicx} %add image
+\usepackage{adjustbox}
+
+\usepackage{pgfplots} %for graphing plotting
+\pgfplotsset{compat=1.18, width=10cm}
+%-----------------------------------------------------------
+
+%for code
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{fancyvrb} %for coding blocks
+%\usepackage{algorithm}
+%\usepackage{algpseudocode} %for pseudocode
+%\usepackage{algorithm, algpseudocode}
+
+%\usepackage{lstfiracode} %firacode
+\usepackage[framemethod=tikz]{mdframed} %adding background to lstlisting
+\usepackage[ruled,vlined,boxed]{algorithm2e} %for pseudocode lines
+
+
+
+%for colors and links
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+\usepackage[many]{tcolorbox}  % for colored boxes
+\usepackage{color} % to get colors
+\usepackage{xcolor} %more colors options and flexibility
+\usepackage{transparent}
+
+
+%-----------------------------------------------------------------------------
+%custom commands
+
+%code
+\newcommand{\problem
+}[2]{
+\begin{mdframed}
+    \textsc{question} \textbf{#1} \hfill #2
+\end{mdframed}
+}
+\newcommand{\codecap}[2]{{\vspace{4pt}{\emph{#1}}} \hfill \href{#2}{Link to the code\ }\vspace{25pt}}
+\newcommand{\code}[1]{{\texttt{#1}}}
+
+%math
+\newcommand{\bigo}[1]{$O(#1)$ }
+\newcommand{\thetan}[1]{$\theta(#1)$}
+% \newcommand{\vector}[1]{$\overrightarrow{#1}$}}o
+\newcommand{\contradiction}{%
+\begin{tikzpicture}[rotate=45,x=0.5ex,y=0.5ex]
+\draw[line width=.2ex] (0,2) -- (3,2) (0,1) -- (3,1) (1,3) -- (1,0) (2,3) -- (2,0);
+\end{tikzpicture}
+}
+
+\newcommand{\vecset}[2]{\{ {#1}_1, {#1}_2, {#1}_3,  \dots,  {#1}_{#2}\}}
+
+%display
+\newcommand{\link}[3][blue]{\href{#2}{\color{#1}{#3}}}%
+\newcommand{\inlink}[1]{\underline{\emph{\link[black]{#1}{#1}}}}
+
+
+%header
+\newcommand{\heading}[5]{
+\hrule ~\\~\\
+\begin{large}
+\noindent\emph{#1}\smallskip ~\\
+Professor #3 \hfill Week #2 \smallskip ~\\
+\textbf{Shubhro Gupta} \hfill Due #4 ~\\
+\end{large} \medskip ~\\
+{\emph{Collaborators: #5}}~\\
+\hrule
+\vspace{50pt}
+~\\
+}
+
+% \newcommand\dunderline[3][-1pt]{{%
+%   \sbox0{#3}%
+%   \ooalign{\copy0\cr\rule[\dimexpr#1-#2\relax]{\wd0}{#2}}}}
+
+
+%-----------------------------------------------------------------------------
+%title
+\usepackage{algpseudocode}
+\begin{document}
+
+\heading{Real Analysis}{1}{Rishi Vyas}{Monday, 18 August}{Khushi Tyagi}
+
+\problem{A}{2 Points}
+\textbf{To Show.} The set $(- \infty, a)$ is open, i.e., $B(x, \delta) \subseteq (- \infty, a)$ for some $ x \in (- \infty, a), \delta > 0$.\\
+\textbf{Proof.} Let $x \in (- \infty, a)$, then $- \infty < x < a$.\\
+Let $\delta = min(x + \infty, a - x)$.\\
+This means $\delta \leq x + \infty$ and $\delta \leq a - x$.\\
+We have to show that $B(x - \delta, x + \delta) \subseteq (- \infty, a)$.\\
+From above $x - \delta \leq x  - (x + \infty) = - \infty$ and $x + \delta \leq x + (a - x) = a$. (By subtracting $x$ from both sides).\\
+Thus, $B(x - \delta, x + \delta) \subseteq (- \infty, a)$.\\
+Since for any $x \in (- \infty, a)$, we can find a $\delta > 0$ such that $B(x - \delta, x + \delta) \subseteq (- \infty, a)$, the set $(- \infty, a)$ is open. \hfill $\square$\\
+\vspace{10pt}
+
+\noindent \textbf{To Show.} The set $(\infty, a]$ is not open, i.e., $B(x, \delta) \not\subseteq (\infty, a]$ for any $ x \in (\infty, a], \delta > 0$.\\
+\textbf{Proof.} Let $x \in (\infty, a]$, then $x \leq a < \infty$.\\
+Assume $x = a$, and $B(x, \delta) \subseteq (\infty, a] \implies B(a - \delta, a + \delta) \subseteq (\infty, a]$.\\
+This means $a + \delta \leq a \implies \delta \leq 0$.\\
+But $\delta > 0$, hence $B(x, \delta) \not\subseteq (\infty, a]$.\\
+Thus, for any $x \in (\infty, a]$, we cannot find a $\delta > 0$ such that $B(x, \delta) \subseteq (\infty, a]$. Hence, the set $(\infty, a]$ is not open. \hfill $\square$\\
+
+
+
+
+\problem{B}{2 Points}
+\textbf{To Determine. } All $x \in \mathbb{R}$ that satisfies $|x + 3| + |x - 2| = 9$.\\
+\textbf{Solution.} \\
+\underline{Case 1:} $x \geq 2$.\\
+Then $|x + 3| = x + 3$ and $|x - 2| = x - 2$.\\
+Thus, $x + 3 + x - 2 = 9 \implies 2x + 1 = 9 \implies x = 4$.\\
+\\
+\noindent \underline{Case 2:} $-3 \leq x < 2$.\\
+Then $|x + 3| = x + 3$ and $|x - 2| = -x + 2$.\\
+Thus, $x + 3 - x + 2 = 9 \implies 5 = 9$ which is not possible.\\
+\\
+Thus, there are no solutions for $-3 \leq x < 2$. \hfill $\square$\\
+
+
+
+
+\problem{C}{2 Points}
+\textbf{To Show. } $\mathbb{Z}^c$ is open in $\mathbb{R}$.\\
+\textbf{Proof.}\\
+$\mathbb{Z}^c = \underset{n \in \mathbb{Z}}{\bigcup} (n, n + 1)$.\\
+Let $x \in \mathbb{Z}^c$, then $x \in (n, n + 1)$ for some $n \in \mathbb{Z}$.\\
+Let $\delta = min(x - n, n + 1 - x)$.\\
+Then $x - \delta \leq x - (x - n) = n$ and $x + \delta \leq x + (n + 1 - x) = n + 1$.\\
+$B(x, \delta) = (x - \delta, x + \delta)$.
+Consider $x - \delta$. If $x - \delta = n$, then $x - \delta \in (n, n + 1)$.\\
+If $x - \delta < n$, then $x - \delta \in (n - 1, n)$.\\
+Similarly, $x + \delta \in (n, n + 1)$ or $(n, n + 1)$.\\
+
+\noindent Therefore $B(x, \delta) = (x - \delta, x + \delta) \subseteq (n, n + 1) \subseteq \mathbb{Z}^c$.\\
+
+
+\problem{E}{2 Points}
+\textbf{To Show.} sup$(S) \not\in S$ for any non-empty, bounded above set $S \subseteq \mathbb{R}$.\\
+\textbf{Proof.} Assume sup$(S) \in S$, and sup$(S) = x$.\\
+Since $S$ is open, $\exists \delta > 0$ such that $B(x, \delta) = (x - \delta, x + \delta) \subseteq S$.\\
+Since $x$ is the supremum of $S$, $\forall s \in S, s \leq x$.
+\\ $x < x + \delta$, since $\delta > 0$.\\
+Also, $x + \delta \in S$, since $x + \delta \in B(x, \delta) \subseteq S$.\\
+But $x + \delta > x$, which contradicts the fact that $x$ is the supremum of $S$.\\
+Thus, sup$(S) \not\in S$ for any non-empty, bounded above set $S \subseteq \mathbb{R}$. \hfill $\square$\\
+
+
+
+
+
+
+\problem{F}{4 Points}
+\textbf{To Find. } Closure and limit of\\
+(1) (0, 3] $\subseteq \mathbb{R}$\\
+\textbf{Solution.} \\
+\underline{Closure} $\overline{(0, 3]} = (0, 3] \cup \{0\}$.\\
+We have to show that $B(x, \delta) \cap (0, 3] \neq \emptyset$ for any $x \in \overline{(0, 3]}$ and $\delta > 0$.\\
+Let $y = min \frac{0 + \delta}{2}, 1.5$.\\
+Since $0 < y < 1.5$, $y \in (0, 3]$.\\
+Taking $x = 0$, we have $B(0, \delta) \cap (0, 3]$, we get $y \in B(0, \delta) \cap (0, 3]$.\\
+Thus, $\overline{(0, 3]} = (0, 3] \cup \{0\}$.\\
+
+\noindent \underline{Limit}
+$\lim_{x \to 3} (0, 3] = 3$.\\
+We have to show that $\forall \epsilon > 0, \exists \delta > 0$ such that $0 < |x - 3| < \delta \implies |f(x) - 3| < \epsilon$.\\
+Let $\delta = \epsilon$.\\
+Then $0 < |x - 3| < \delta \implies 0 < x - 3 < \delta \implies 0 < x - 3 < \epsilon \implies |f(x) - 3| < \epsilon$.\\
+Thus, $\lim_{x \to 3} (0, 3] = 3$.\\
+
+(2) $\mathbb{Z}$ Closure is $\mathbb{Z}$.\\
+\textbf{Solution.} \\
+
+(3) $\mathbb{Q} \cap (0, 1)$ Closure is $[0, 1]$.\\
+
+
+
+\problem{G}{4 Points}
+\textbf{Construct Example. } Of an infinite susbet of $\mathbb{R}$ which is not an interval, and is neither closed or open.\\
+\textbf{Solution.} Consider the set $S = \{1\} \cup (2, 3)$.\\
+$S$ is not an interval since it is not connected.\\
+$S$ is not closed since it does not contain its limit points.\\
+$S$ is not open since it does not contain all its boundary points.\\
+\\
+\textbf{Construct Example. } Of a set $S \subseteq \mathbb{R}$ which is bounded and has exactly 2 limit points.\\
+\textbf{Solution.} Consider the set S =
+$S$ is bounded since $0 < S < 3$.\\
+The limit points of $S$ are 1 and 2, since
+
+
+
+
+\problem{H}{3 Points}
+Let $S \subseteq \mathbb{R}$ and $x \in \mathbb{R}$.\\
+\textbf{To Show. } $x = \text{inf}(S) \iff $ The element $x$ is a lower bound and given $n \in \mathbb{N}, \exists y \in S$ such that $y < x + \frac{1}{n}$.\\
+\textbf{Proof.} \\
+\underline{Case 1} $x = \text{inf}(S)$.\\
+Then $x$ is a lower bound of $S$ by definition.\\
+If $x$ is an infimum, then $\forall 1 > \epsilon > 0, \exists y \in S$ such that $x \leq y < x + \epsilon$.\\
+Since $\epsilon > 0$, we can write $\epsilon = \frac{1}{n}$ for some $n \in \mathbb{N}$.\\
+Thus, $\forall n \in \mathbb{N}, \exists y \in S$ such that $y < x + \frac{1}{n}$.\\
+
+\noindent \underline{Case 2} The element $x$ is a lower bound and given $n \in \mathbb{N}, \exists y \in S$ such that $y < x + \frac{1}{n}$.\\
+Let $t$ be any lower bound of $S$.\\
+Then $t \leq x$ since $x$ is the greatest lower bound.\\
+We have to show that $x \leq t$. Suppose $x > t$.\\
+Then $x - t > 0$.\\
+Let $\epsilon = x - t$.\\
+Then $\epsilon > 0$.\\
+Since $\epsilon > 0$, we can write $\epsilon = \frac{1}{n}$ for some $n \in \mathbb{N}$.\\
+Thus, $\exists y \in S$ such that $y < x + \frac{1}{n} = t + \epsilon$. $y - \epsilon < t$. But $y - \epsilon < x$.\\
+This contradicts the fact that $x$ is the greatest lower bound.\\
+
+
+\problem{I}{7 Points}
+(1) \textbf{To Draw. } A picture of the set $S :=  \{ \frac{1}{n} - \frac{1}{m} : n, m \in \mathbb{N} \}$.\\
+\textbf{Solution.} \\
+(1) The set $S$ is the set of all possible differences between reciprocals of natural numbers.\\
+(2) \textbf{To Show. } The supremum and infimum of $S$ are 1 and 0 respectively.\\
+Let $x = \frac{1}{n} - \frac{1}{m} \in S$.\\
+Then $0 < x < 1$.\\
+Thus, $0$ is a lower bound of $S$.\\
+Let $y \in S$, then $y = \frac{1}{n} - \frac{1}{m}$.\\
+Then $y < 1$ for all $n, m \in \mathbb{N}$.\\
+Thus, $1$ is an upper bound of $S$.\\
+
+(3) \textbf{To Show. } The set $S$ is not open or closed.
+\textbf{Proof.} \\
+\underline{Open} Let $x \in S$, then $x = \frac{1}{n} - \frac{1}{m}$.\\
+Let $\delta = min(\frac{1}{n}, \frac{1}{m})$.\\
+Then $B(x, \delta) = (\frac{1}{n} - \delta, \frac{1}{m} + \delta)$.\\
+Since $\delta < \frac{1}{n}$ and $\delta < \frac{1}{m}$, $B(x, \delta) \not\subseteq S$.\\
+Thus, $S$ is not open.\\
+
+\noindent \underline{Closed} Let $x \in S$, then $x = \frac{1}{n} - \frac{1}{m}$.\\
+Let $\delta = min(\frac{1}{n}, \frac{1}{m})$.\\
+Then $B(x, \delta) = (\frac{1}{n} - \delta, \frac{1}{m} + \delta)$.\\
+Since $\delta < \frac{1}{n}$ and $\delta < \frac{1}{m}$, $B(x, \delta) \not\subseteq S$.\\
+Thus, $S$ is not closed.\\
+
+(4) \textbf{To Calculate. } The Closure.
+\textbf{Solution.} \\
+The closure of $S$ is $\overline{S} = S \cup \{0, 1\}$.\\
+
+
+
+
+
+
+
+
+\end{document}
